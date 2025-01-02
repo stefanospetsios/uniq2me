@@ -1,0 +1,26 @@
+{
+  "language": [
+    {
+      "generate": true,
+      "locale": "en-US",
+      "localeDir": "EN",
+      "number": 123,
+      "object": {
+        "a": "b",
+        "c": "d"
+      },
+      "logo": "<span>stefanos 23a </span>",
+      "docsRepositoryBase": "https://github.com/stefanospetsios/stefanos/tree/stefanos/23a",
+      "titleTemplate": "%s – Nextra",
+      "projectLink": "https://github.com/stefanospetsios/stefanos",
+      "headUrl": "https://23a.stefanos.petsios.gr",
+      "bannerDismissible": true,
+      "bannerKey": 'stefanos/23a',
+      "bannerText": '<a href="https://23a.stefanos.petsios.gr" target="_blank"> 🎉 stefanos 23a is released. Read more → </a>',
+      "getText": 'Edit this page on GitHub →',
+      "feedbackContent": 'Question? Give us feedback →',
+      "feedbackLabels": 'feedback',
+      "footerText": '<span> {new Date().getFullYear()} © <a href="https://23a.stefanos.petsios.gr/" target="_blank">23a stefanos</a> </span>'
+    }
+  ]
+}

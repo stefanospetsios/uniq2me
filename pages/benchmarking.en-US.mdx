@@ -1,0 +1,162 @@
+#### Benchmarking of scoring factor (SF)
+
+
+```
+SCORE AND MASK = MASK
+1 AND 1 = 1.
+0 AND 1 = 0.
+1 AND 0 = 0.
+0 AND 0 = 0.
+```
+
+PASS WHEN : (SCORE) AND (MASK)  = MASK
+
+   if pass then   (SCORE) XOR (MASK) shows the extra points.
+   if fail then   [ (SCORE) AND MASK  ] XOR MASK  = show the failed questions.
+
+
+
+#### Benchmarking of scoring factor Set (SFS)
+
+e.g. each chapter will have 16 binary SF so for the 10th SFS will be:
+
+```
+1010 1010 1010 1010
+A    A    A    A
+```
+(AAAA)<sub>A</sub>
+
+
+lets say the mask we want to test is
+```
+we want of to match question 0:   1
+we want of to match question 1:   1
+we want of to match question 2:   1
+we want of ignore   question 3:   0
+we want of to match question 4:   1
+we want of ignore   question 5:   0
+we want of to match question 6:   1
+we want of ignore   question 7:   0
+we want of to match question 8:   1
+we want of ignore   question 9:   0
+we want of to match question A:   1
+we want of to match question B:   1
+we want of ignore   question C:   0
+we want of ignore   question D:   0
+we want of to match question E:   1
+we want of ignore   question F:   0
+
+looks like this:
+1 1 1 0 1 0 1 0 1 0 1 1 0 0 1 0  = EAB2
+```
+
+so the MASK is noted as /(EAB2)<sub>A></sub>
+
+
+E.g. we want to test if the score (AAAA)<sub>A</sub> wualifies a requirement of mask /(EAB2)<sub>A></sub> could be writen in short:
+
+(AAAA)<sub>A</sub> /(EAB2)<sub>A></sub>
+or
+
+(AAAA/EAB2)<sub>A></sub>
+
+
+
+
+
+like before (AAAA)<sub>A</sub> it decodes to:
+```
+score of question 0:   1
+score of question 1:   0
+score of question 2:   1
+score of question 3:   0
+score of question 4:   1
+score of question 5:   0
+score of question 6:   1
+score of question 7:   0
+score of question 8:   1
+score of question 9:   0
+score of question A:   1
+score of question B:   0
+score of question C:   1
+score of question D:   0
+score of question E:   1
+score of question F:   0
+
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0  = AAAA
+1 1 1 0 1 0 1 0 1 0 1 1 0 0 1 0  = EAB2
+----------------------------------  AND
+1 0 1 0 1 0 1 0 1 0 1 0 0 0 1 0  = AAA2  witch is not equal the MASK so it failed the test.
+
+
+```
+
+
+
+similarly we could ask about the MASK of the:
+* 10th SFS question A as if:  /(1)<sub>AA</sub>
+* 10th SFS question F as if:  /(0)<sub>AF</sub>
+
+
+
+
+#### Benchmarking of MULTIPLE Scoring Factor Set
+
+in short:
+scores for SFS 1 to 8
+
+[0123:4567:89AB:CDEF:FEDC:BA98:7654:3210]<sub>1..8</sub>
+is equivalent to this:
+https://www.rapidtables.com/convert/number/hex-to-binary.html
+
+Convert each hex digit to 4 binary digits (see conversion table below):
+
+```
+0123456789ABCDEFFEDCBA9876543210
+= 0     1    2    3    4    5    6    7    8    9    A    B    C    D    E    F    F    E    D    C    B    A    9    8    7    6    5    4    3    2    1    0
+= 0000  0001 0010 0011 0100 0101 0110 0111 1000 1001 1010 1011 1100 1101 1110 1111 1111 1110 1101 1100 1011 1010 1001 1000 0111 0110 0101 0100 0011 0010 0001 0000
+```
+
+```
+ 0000 0001 0010 0011  scores of SFS 1
+ 0100 0101 0110 0111  scores of SFS 2
+ 1000 1001 1010 1011  scores of SFS 3
+ 1100 1101 1110 1111  scores of SFS 4
+ 1111 1110 1101 1100  scores of SFS 5
+ 1011 1010 1001 1000  scores of SFS 6
+ 0111 0110 0101 0100  scores of SFS 7
+ 0011 0010 0001 0000  scores of SFS 8
+```
+
+so (0)<sub>7F</sub> we know the score of binary question F in SFS 7 is not meet = 0.
+
+
+#### Benchmarking Complete
+
+a complete  score for 16 x 16 questions  will look like this
+```
+{0123:4567:89AB:CDEF:FEDC:BA98:7654:3210:0123:4567:89AB:CDEF:FEDC:BA98:7654:3210}
+```
+
+for the special cases we have 0000 SFS this could me shortened to this:
+
+```
+    {0123:4567:89AB:0000:FEDC:BA98:0000:3210:0123:0000:0000:0000:0000:0000:0000:3210}
+=   {0123:4567:89AB::FEDC:BA98:0000:3210:0123:::::::3210}
+```
+
+Discussion if we want this more or less
+e.g.
+
+```
+    {0123:4567:89AB:0000:FEDC:BA98:0000:3210:0123:0000:0000:0000:0000:0000:0000:3210}
+=   {0123:4567:89AB::FEDC:BA98:0000:3210:0123:::::::3210}
+=   {0123:4567:89AB:4:FEDC:BA98:0000:3210:0123:A:B:C:D:E:F:3210} NO NUMBERS IN First and Last
+```
+
+e.g.
+```
+{0000:4567:89AB:0000:FEDC:BA98:0000:3210:0123:0000:0000:0000:0000:0000:0000:0000}
+=   {0000:4567:89AB::FEDC:BA98:0000:3210:0123:::::::0000}
+=   {:4567:89AB:4:FEDC:BA98:0000:3210:0123:A:B:C:D:E:F:} NO NUMBERS IN First and Last
+```
