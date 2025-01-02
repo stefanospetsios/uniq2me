@@ -1,0 +1,133 @@
+
+
+
+name: build and deploy k8s
+on:
+  push:
+    branches:
+      - en/*
+
+
+env:
+  PROJECT: "en" # language / el etc
+  # APP: "uniq2me"  l
+  APP: "webapp"
+  SERVICE: "uniq2me"
+  # INSTANCE: latest/24_12/staging/development
+  DEPLOY_SERVER: "uniq2me.petsios.gr"
+
+jobs:
+  build:
+
+    concurrency:
+      group: ${{ github.ref }}
+      cancel-in-progress: true
+
+    runs-on: self-hosted
+
+    steps:
+
+
+      - uses: actions/checkout@v4
+
+      - name: Set instance
+        run: |
+          echo INSTANCE=${{ github.ref_name }} | sed 's/en\///' | tr '/' '-' >> $GITHUB_ENV
+
+      - name: Set version
+        run: |
+          echo VERSION=${GITHUB_SHA::7} >> $GITHUB_ENV
+
+      - name: Checkout private template static
+        uses: actions/checkout@v4
+        with:
+          repository: stefanospetsios/template_static
+          token: ${{ secrets.uni2me_token }}
+          path: static
+
+      - name: import from static
+        shell: bash
+        run: |
+           pwd
+           python3 --version
+           ls -l static
+           [ ! -d "components" ] &&  mkdir components
+           [ ! -d "pages" ]      &&  mkdir pages
+           [ -d "./static/pages" ]       && cd ./static/pages           && ls -l   &&  cp -R .  ../../pages      && cd ../..
+           [ -d "./static/components" ]  && cd ./static/components      && ls -l   &&  cp -R .  ../../components && cd ../..
+           [ -d "./static/public" ]      && cd ./static/public          && ls -l   &&  cp -R .  ../../public     && cd ../..
+           mv next.config.js next.config.js2
+           # mv theme.config.tsx theme.config.tsx2
+           cp  ./static/*.*  ./
+           mv next.config.js2 next.config.js
+           # mv theme.config.tsx2 theme.config.tsx
+           echo "in this repo we generate the theme.config.tsx"
+           rm theme.config.tsx
+           cp  ./static/Dockerfile.node ./Dockerfile
+
+      - name: generate matrix of directory
+        shell: bash
+        run: |
+            echo "Lets create the json for each SFS based on the info in each [0..F].json" 
+            . .github/scripts/gen_sfs_deploy.sh
+            . .github/scripts/gen_locale.sh
+            . .github/scripts/gen_meta_mdx.sh
+
+
+      - name: show tree
+        shell: bash
+        run: |
+            tree ./json/en
+            tree ./pages/ 
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.13.0
+          registry-url: 'https://npm.pkg.github.com'
+
+      - name: npm install
+        shell: bash
+        run: npm  --prefer-offline --cache-dir=.npm install
+
+      - name: npm run build
+        shell: bash
+        run: npm --cache-dir=.npm run build
+
+      - uses: stefanospetsios/actions-docker-builder@main
+        id: docker_build
+        with:
+          PROJECT: ${{ env.PROJECT }}
+          APP: ${{ env.APP }}
+          SERVICE: ${{ env.SERVICE }}
+          INSTANCE: ${{ env.INSTANCE }}
+          VERSION: ${{ env.VERSION }}
+          DOCKER_PASS: ${{ secrets.STEFANOS_DOCKER_PASS }}
+          DOCKER_REPOSITORY_BASE: "docker.uniq2me.petsios.gr"
+
+
+  deploy:
+    needs: build
+
+    concurrency:
+      group: ${{ github.ref }}
+      cancel-in-progress: true
+
+    runs-on: self-hosted
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - name: Set instance
+        run: |
+          echo INSTANCE=${{ github.ref_name }} | sed 's/en\///' | tr '/' '-' >> $GITHUB_ENV
+
+      - name: Set version
+        run: |
+          echo VERSION=${GITHUB_SHA::7} >> $GITHUB_ENV
+
+      - name: Deploy to Server
+        run: |
+          echo "${{ secrets.STEFANOS_CIUSER_SSH }}" > /tmp/sshkey
+          chmod 600 /tmp/sshkey
+          ssh -i /tmp/sshkey -o StrictHostKeyChecking=no ciuser@${DEPLOY_SERVER} "cd /dockers/deploy_uniq2me/${{ env.PROJECT }} && docker compose pull ${{ env.PROJECT }}-${{ env.INSTANCE }} &&  docker compose up -d ${{ env.PROJECT }}-${{ env.INSTANCE }} "

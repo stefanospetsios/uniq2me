@@ -1,0 +1,224 @@
+
+{
+  "revision": "0.0.1",
+  "generate": true,
+  "keyTitle": "Software Development Lifecycle",
+  "keyShortInfo": "We assess the complete lifecycle of software development, from implementation to decommissioning, including design, deployment, CI/CD pipelines, and security auditing (e.g., API security).",
+  "keyWords": "word1 word2 wordB wordZ",
+  "promptAi": "proposed prompt for AI",
+  "metaSetLeaderGithubId": "stefanospetsios",
+  "metaSetLeaderEmail": "stefanos@petsios.gr",
+  "autoGenLastDateModified": "null" ,
+  "autoGenDate": null,
+  "meta":
+  {
+    "title": "Software Development Lifecycle",
+    "menuTitle": "Software Development Lifecycle",
+    "theme": {
+      "typesetting": "default",
+      "breadcrumb": true,
+      "footer": true,
+      "sidebar": true,
+      "toc": true,
+      "pagination": false,
+      "layout": "default"
+    }
+  },
+  "set": [
+    {
+      "id": "0",
+      "repoId": "0001",
+      "metaSetLeaderGithubId": "stefanospetsios",
+      "metaSetLeaderEmail": "stefanos@petsios.gr",
+      "score": null,
+      "signer": [
+       { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+       { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+       { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+      ]
+    },
+    {
+      "id": "1",
+      "repoId": "0002",
+      "metaSetLeaderGithubId": "stefanospetsios",
+      "metaSetLeaderEmail": "stefanos@petsios.gr",
+      "score": null,
+      "signer": [
+       { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+       { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+       { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+      ]
+    },
+    {
+     "id": "2",
+     "repoId": "0003",
+     "metaSetLeaderGithubId": "stefanospetsios",
+     "metaSetLeaderEmail": "stefanos@petsios.gr",
+     "score": null,
+     "signer": [
+      { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+      { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+      { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+     ]
+   },
+    {
+     "id": "3",
+     "repoId": "0004",
+     "metaSetLeaderGithubId": "stefanospetsios",
+     "metaSetLeaderEmail": "stefanos@petsios.gr",
+     "score": null,
+     "signer": [
+      { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+      { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+      { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+     ]
+   },
+   {
+     "id": "4",
+     "repoId": "0005",
+     "metaSetLeaderGithubId": "stefanospetsios",
+     "metaSetLeaderEmail": "stefanos@petsios.gr",
+     "score": null,
+     "signer": [
+      { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+      { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+      { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+     ]
+   },       
+   {
+     "id": "5",
+     "repoId": "0006",
+     "metaSetLeaderGithubId": "stefanospetsios",
+     "metaSetLeaderEmail": "stefanos@petsios.gr",
+     "score": null,
+     "signer": [
+      { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+      { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+      { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+     ]
+   },
+   {
+     "id": "6",
+     "repoId": "0007",
+     "metaSetLeaderGithubId": "stefanospetsios",
+     "metaSetLeaderEmail": "stefanos@petsios.gr",
+     "score": null,
+     "signer": [
+      { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+      { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+      { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+     ]
+   },
+   {
+    "id": "7",
+    "repoId": "0008",
+    "metaSetLeaderGithubId": "stefanospetsios",
+    "metaSetLeaderEmail": "stefanos@petsios.gr",
+    "score": null,
+    "signer": [
+     { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+     { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+     { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+    ]
+  },
+  {
+    "id": "8",
+    "repoId": "0009",
+    "metaSetLeaderGithubId": "stefanospetsios",
+    "metaSetLeaderEmail": "stefanos@petsios.gr",
+    "score": null,
+    "signer": [
+     { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+     { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+     { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+    ]
+  },
+  {
+   "id": "9",
+   "repoId": "0010",
+   "metaSetLeaderGithubId": "stefanospetsios",
+   "metaSetLeaderEmail": "stefanos@petsios.gr",
+   "score": null,
+   "signer": [
+    { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+    { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+    { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+   ]
+ },
+ {
+   "id": "A",
+   "repoId": "0011",
+   "metaSetLeaderGithubId": "stefanospetsios",
+   "metaSetLeaderEmail": "stefanos@petsios.gr",
+   "score": null,
+   "signer": [
+    { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+    { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+    { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+   ]
+ },
+ {
+  "id": "B",
+  "repoId": "0012",
+  "metaSetLeaderGithubId": "stefanospetsios",
+  "metaSetLeaderEmail": "stefanos@petsios.gr",
+  "score": null,
+  "signer": [
+   { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+   { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+   { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+  ]
+},
+{
+ "id": "C",
+ "repoId": "0013",
+ "metaSetLeaderGithubId": "stefanospetsios",
+ "metaSetLeaderEmail": "stefanos@petsios.gr",
+ "score": null,
+ "signer": [
+  { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+  { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+  { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+ ]
+},
+{
+ "id": "D",
+ "repoId": "0014",
+ "metaSetLeaderGithubId": "stefanospetsios",
+ "metaSetLeaderEmail": "stefanos@petsios.gr",
+ "score": null,
+ "signer": [
+  { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+  { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+  { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+ ]
+},
+{
+"id": "E",
+"repoId": "0015",
+"metaSetLeaderGithubId": "stefanospetsios",
+"metaSetLeaderEmail": "stefanos@petsios.gr",
+"score": null,
+"signer": [
+ { "nickname" : "demoA",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+ { "nickname" : "demoB",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  },
+ { "nickname" : "demoC",  "vote": "0", "isBiased": false, "fullName": "demo signer", "timestamp": "0", "text": "-"  }
+]
+},
+{
+"id": "F",
+"repoId": "0016",
+"metaSetLeaderGithubId": "stefanospetsios",
+"metaSetLeaderEmail": "stefanos@petsios.gr",
+"score": null
+}
+],
+  "editLink": "",
+  "jsonLink": "",
+  "authorGithubId" :"stefanospetsios",
+  "glacierWiki": "another md for this case",
+  "glacierLink": "a links that will always link to this release sf",
+  "glacerQRcode": "the qr code from the above",
+  "linkLatest": "redirect link to latest",
+  "resultScore": "0 or 1"
+}

@@ -1,0 +1,64 @@
+{
+    "question": {
+        "shortBinaryQuestion":       "",
+        "plain":      "explanation text readable from non specialized reader.",
+        "technical-short":    "a very technical short description ",
+        "keywords": " key words to use e.g. in google",
+        "promptAiOptimization" : "what to ask the AI"
+    },
+    "meta":
+    {
+      "title": "Scroing Factor F",
+      "theme": {
+        "typesetting": "default",
+        "breadcrumb": true,
+        "footer": true,
+        "sidebar": true,
+        "toc": true,
+        "pagination": false,
+        "layout": "default"
+      }
+    },
+    "signatures": {
+        "signerA": {
+            "vote": "0",
+            "isBiased": false,
+            "fullName": "stefanos petsios",
+            "timestamp": "0",
+            "text": "-"
+         },
+        "signerB": {
+            "vote": "0",
+            "isBiased": false,
+            "fullName": "stefanos petsios",
+            "timestamp": "0",
+            "text": "-"
+         },
+        "signerC": {
+            "vote": "0",
+            "isBiased": false,
+            "fullName": "stefanos petsios",
+            "timestamp": "0",
+            "text": "-"
+         }
+    },
+    "clarificationQuestion": [
+      { "key1": "a. pappapapapp aapapalaaksi", "key2": "aaaaadasjjjsks" },
+      { "key1": "b. skkks  ksajasks jashjs %%5 iww", "key2": "bbbbbadasjjjsks" },
+      { "key1": "c. aallakksi lskiaosl papal &&", "key2": "cckkkcsks" }
+    ],
+    "wikiLinks": [
+      { "key1": "1. wiki", "key2": "aaaaadasjjjsks" },
+      { "key1": "2.  skkks  ksajasks jashjs %%5 iww", "key2": "bbbbbadasjjjsks" },
+      { "key1": "3. wiki aallakksi lskiaosl papal &&", "key2": "cckkkcsks" }
+    ],
+    "openSourceApproach": "in short a canonical and open source approach, also productions solutions can be proposed",
+    "editLink": "",
+    "jsonLink": "",
+    "authorGithubId" :"",
+    "glacierWiki": "another md for this case",
+    "glacierLink": "a links that will always link to this release sf",
+    "glacerQRcode": "the qr code from the above",
+    "linkLatest": "redirect link to latest",
+    "resultScore": "0 or 1"
+}
