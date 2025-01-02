@@ -94,7 +94,7 @@ jobs:
             echo "Lets create the json for each SFS based on the info in each [0..F].json" 
             . .github/scripts/gen_sfs_deploy.sh
             . .github/scripts/gen_locale.sh
-            . .github/scripts/gen_meta_mdx.sh
+            echo . .github/scripts/gen_meta_mdx.sh
 
       - name: show tree
         shell: bash
